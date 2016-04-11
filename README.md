@@ -47,7 +47,7 @@ c.MarathonLauncher.controller_config_port = '1235'  # The port the controller ex
 
 While this new profile will work with the Jupyter IPython Cluter tab. You should start with the command line to help debug.
 ```
-ipcluster start --n=4 --profile=mesos --log-level=DEBUG
+ipcluster start --n=4 --profile=mesos
 ```
 
 As long as this command starts you should see the the docker containers in your marathon ui under the `marathon_app_group` you set earlier. You are now ready to cook with fire.
@@ -62,6 +62,7 @@ rc[:].apply_async(socket.gethostname).get_dict() # Should print the hosts of the
 ```
 
 To shut down just press Ctrl+c in the terminal you ran `ipcluster` 
+
 
 
 ## Design
