@@ -1,0 +1,13 @@
+FROM python:3
+
+RUN apt-get update && apt-get install supervisor jq -y
+
+WORKDIR /opt
+
+COPY requirements.txt /opt/requirements.txt
+RUN pip install -r ./requirements.txt
+
+ENV IPYTHONDIR=/opt/
+CMD ["/usr/bin/supervisord", "-c", "./engine/supervisord.conf"]
+RUN chmod 666 /opt/
+COPY . /opt
