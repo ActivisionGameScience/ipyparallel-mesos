@@ -11,4 +11,6 @@ coverage.xml
 results.xml
 .coverage
 version
+dist/*
+build/*
 
