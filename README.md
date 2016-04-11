@@ -27,7 +27,7 @@ Create new ipython profile
 ipython profile create --parallel --profile=mesos
 ```
 
-Edit `~/.ipython/profile_test/ipcluster_config.py` and add
+Edit `~/.ipython/profile_mesos/ipcluster_config.py` and add
 ```
 
 # Required
@@ -42,7 +42,7 @@ c.MarathonLauncher.engine_docker_image = 'jdennison/ipyparallel-marathon-engine:
 # Optional
 c.MarathonLauncher.engine_memory = 1024  # Amount of memory (in megabytes) to limit the docker container. NOTE: if your engine uses more the this, the docker container will be killed by the kernel without warning.
 c.MarathonLauncher.controller_memory = 512  # Amount of memory (in megabytes) to limit the docker container. NOTE: if your engine uses more the this, the docker container will be killed by the kernel without warning.
-c.MarathonLauncher.controller_config_port = 1235  # The port the controller exposes for clients and engines to retrive connection information. Note, if there are multiple users on the same cluster this will need to be changed
+c.MarathonLauncher.controller_config_port = '1235'  # The port the controller exposes for clients and engines to retrive connection information. Note, if there are multiple users on the same cluster this will need to be changed
 ```
 
 While this new profile will work with the Jupyter IPython Cluter tab. You should start with the command line to help debug.
