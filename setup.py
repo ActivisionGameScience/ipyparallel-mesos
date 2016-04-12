@@ -13,6 +13,7 @@ setup(name='ipyparallel_mesos',
       description='ipyparallel launchers for mesos using docker and marathon',
       author='John Dennison',
       author_email='john.dennison@activision.com',
+      url = 'https://github.com/ActivisionGameScience/ipyparallel-mesos/',
       packages=find_packages(),
       install_requires=requirements
 )
