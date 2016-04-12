@@ -9,7 +9,7 @@ requirements = [
 ]
 
 setup(name='ipyparallel_mesos',
-      version='0.0.1',
+      version='0.0.2',
       description='ipyparallel launchers for mesos using docker and marathon',
       author='John Dennison',
       author_email='john.dennison@activision.com',
